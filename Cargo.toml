@@ -1,0 +1,20 @@
+[package]
+name = "skyrim-fps-unlocker"
+version = "1.0.0"
+edition = "2021"
+authors = ["Shiro"]
+description = "A small utility that unlocks the framerate in The Elder Scrolls V: Skyrim Special Edition by applying the well-known ini tweaks (bLockFramerate, fMaxTime, iVSyncPresentInterval) safely, with backup and revert."
+license = "MIT"
+repository = "https://github.com/Shiro1337z/skyrim-fps-unlocker"
+
+[dependencies]
+
+[[bin]]
+name = "skyrim-fps-unlocker"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true
